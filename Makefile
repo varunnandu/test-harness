@@ -17,10 +17,6 @@ lint:
 clean:
 	rm -rf .pytest_cache .coverage .pytest_cache coverage.xml build dist *.egg-info
 
-build-docker: clean
-	@ docker build -f docker/Dockerfile . -t $(DOCKER_TAG)
-	@ docker run $(DOCKER_TAG):latest
-
 publish: build
 	@ twine upload dist/* -u {TWINE_USERNAME} -p {TWINE_PASSWORD}
 .PHONY: clean test
