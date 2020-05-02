@@ -1,0 +1,10 @@
+.envrc
+.direnv
+.idea/
+.DS_Store
+.pytest_cache
+*.pyc
+build/
+data_products_python_sdk.egg-info/
+dist/
+.pytest_cache/
